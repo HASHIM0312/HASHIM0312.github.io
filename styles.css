@@ -367,7 +367,7 @@ h2 {
 }
 #projects li strong {
   color: var(--accent);
- 
+
   display: block;
   text-align: center;
   font-size: 1.2rem;
@@ -609,4 +609,40 @@ nav {
   opacity: 0.85;
   border-bottom: none !important;
   padding-bottom: 0;
+}
+
+
+  
+.quote-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 12px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  gap: 16px;
+  max-width: 600px;
+  width: 90%;
+}
+
+#quote-label {
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+}
+
+button {
+  all: unset;
+  font-size: 20px;
+  color: #007aff;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: rgba(0, 122, 255, 0.1);
 }
