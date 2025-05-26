@@ -10,7 +10,7 @@ function getQuote() {
       quoteElem.innerHTML = `"${quote} - ${author}"`;
     })
     .catch(error => {
-      quoteElem.innerHTML = "Could not load quote. Please try again later.";
+      quoteElem.innerHTML = "Could not load quote. Please try again later." + error;
       console.error("Quote fetch error:", error);
     });
 }
