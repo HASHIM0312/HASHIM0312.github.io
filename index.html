@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Small Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- …other <meta> / <link> tags… -->
+   
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Website</h1>
+    <nav>
+      <a href="#intro-heading">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <!-- Intro Section: Replace image src, name, and bio below sdasd-->
+<section class="About" id="intro">
+  <h1 id="intro-heading">About Me</h1>
+  
+  <div class="intro-text">
+    <h1>Hashim Zafar</h1>
+    <p>I love making things in software</p>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+  <h2>Projects</h2>
+  <ul>
+    <li>
+      <strong>LangChain AI Agent</strong>
+      <div class="project-tech-card">
+      Made using: Python, LangChain, OpenAI API, Google API, Notion API, Discord API
+    </div>
+            <div class="project-description-card">
+        <p>
+          A conversational AIagent chatbot capable of making Google events, and Notion pagfes and tasks relieveing productivity bottlenecks amongst employees of Stillfun, a local Columbus, OH beverage startup.
+        </p>
+         <div class="project-image-card">
+          <img src="assets/pr1.png" alt="LangChain AI Agent Screenshot" />
+        </div>
+        
+        <div class="project-links">
+    <a href="https://github.com/HASHIM0312" target="_blank" rel="noopener" class="project-github-link">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+      </div>
+    </li>
+     <li>
+      <strong>Coding Logger</strong>
+      <div class="project-tech-card">
+      Made using: C#, .NET, Visual Studio, Dapper, SQLite, Entity Framework, LINQ
+    </div>
+            <div class="project-description-card">
+        <p>
+       A CLI application that allows users to create individual coding sessions and then
+access them by date added, or id number. Users can also delete and edit their coding sessions as well (CRUD operations).
+        </p>
+         <div class="project-image-card">
+          <img src="assets/pr1.png" alt="LangChain AI Agent Screenshot" />
+        </div>
+       
+        <div class="project-links">
+    <a href="https://github.com/HASHIM0312" target="_blank" rel="noopener" class="project-github-link">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+      </div>
+    </li>
+     <li>
+      <strong>Canvas Grades</strong>
+      <div class="project-tech-card">
+      Made using: C#, .NETMAUI, Visual Studio, Canvas RestAPI, XAML
+    </div>
+            <div class="project-description-card">
+        <p>
+       Developed and deployed a mobile application that lets end users quickly see their grades with a tap of button without logging
+into a Canvas (Digital Classroom).
+        </p>
+         <div class="project-image-card">
+          <img src="assets/pr1.png" alt="LangChain AI Agent Screenshot" />
+        </div>
+
+        <div class="project-links">
+    <a href="https://github.com/HASHIM0312" target="_blank" rel="noopener" class="project-github-link">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://api.web3forms.com/submit" method="POST">
+       <input type="hidden" name="access_key" value="d67a0217-5288-46ab-a96f-8f16242e3b41">
+      <!-- Username -->
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Your username"
+        required
+      />
+
+      <!-- Email -->
+      <label for="email">Email</label>
+      
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="you@example.com"
+        required
+      />
+
+      <!-- Phone -->
+      <label for="phone">Phone</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="(123) 456-7890"
+      />
+
+      <!-- Message -->
+      <label for="message">Message</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="4"
+        placeholder="What can I help you with?"
+      ></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/hashim-zafar-334724231/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://example.com/instagram" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://github.com/HASHIM0312" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </section>
+<script src="script.js"></script>
+  <footer>
+    <p>&copy; 2023 Hashim Zafar. All rights reserved.</p>
+  </footer>
+</body>
+</html>
