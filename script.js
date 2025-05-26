@@ -7,7 +7,7 @@ function getQuote() {
     .then(data => {
       const quote = data[0].content;
       const author = data[0].author;
-      quoteElem.innerHTML = `"${quote}" - author`;
+      quoteElem.innerHTML = `"${quote}"' - author;
     })
     .catch(error => {
       quoteElem.innerHTML = "Could not load quote. Please try again later." + error;
