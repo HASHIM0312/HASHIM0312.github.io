@@ -111,6 +111,7 @@ nav a:hover::after {
   color: #555;
 }
 
+
 /* Sections & Animations */
 section {
   max-width: 800px;
@@ -588,3 +589,24 @@ nav {
   font-weight: 500;
 }
 
+.main-header {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 0.2rem; /* reduced */
+  margin-top: 1.2rem;    /* add if needed */
+  letter-spacing: 1px;
+}
+
+.quote-header {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 0.7rem; /* reduced */
+  margin-top: 0.2rem;    /* add if needed */
+  opacity: 0.85;
+  border-bottom: none !important;
+  padding-bottom: 0;
+}
