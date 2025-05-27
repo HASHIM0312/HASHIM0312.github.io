@@ -16,11 +16,22 @@
 <body>
   <header>
     <h1 class="main-header">Hashim Zafar</h1>
+    <p class="main-subheader">Aspiring Software and AI Engineer</p>
+    <div class="resume-download-card">
+  <a href="resume.pdf" download>Download Resume</a>
+</div>
     <div class="quote-container">
+  <div class="quote-row">
     <button onclick="onLeftClick()">←</button>
     <span class="quote-header" id="quote"></span>
     <button onclick="onRightClick()">→</button>
   </div>
+  <div class="quote-howmade-card">
+    <a href="https://github.com/HASHIM0312" target="_blank" rel="noopener">how did I make this?</a>
+  </div>
+</div>
+
+ 
     
     <nav>
       <a href="#intro">About</a>
@@ -28,6 +39,7 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
+  
   <!-- Intro Section: Replace image src, name, and bio below sdasd-->
 <section class="About" id="intro">
 
@@ -111,12 +123,12 @@ into a Canvas (Digital Classroom).
     <form action="https://api.web3forms.com/submit" method="POST">
        <input type="hidden" name="access_key" value="d67a0217-5288-46ab-a96f-8f16242e3b41">
       <!-- Username -->
-      <label for="username">Username</label>
+      <label for="username">Name</label>
       <input
         type="text"
         id="username"
         name="username"
-        placeholder="Your username"
+        placeholder="Your name"
         required
       />
 

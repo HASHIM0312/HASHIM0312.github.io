@@ -11,26 +11,36 @@ body {
   background: #f9f9f9;
 }
 
-/* Header & Navigation */
+
+
+/* Optional: Make sure nav and quote-container don't stretch wider than header */
+nav, .quote-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
 header {
-  position: sticky;
-  top: 0;
-  background: #333;
-  padding: 1rem;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border-radius: 2rem 2rem 1rem 1rem;
+  padding: 2rem 2.5rem 1.5rem 2.5rem;
+  max-width: 1100px;
+  min-width: 340px;
+  margin: 2rem auto 2.5rem auto;
+  position: relative;   
+  z-index: 1000;
+  width: auto;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 0.5rem;
+nav, .quote-container {
+  width: 100%;
+  max-width: 900px;     
+  border-radius: 1rem;
 }
-
 nav a {
   color: #fff;
   text-decoration: none;
@@ -241,26 +251,19 @@ body {
 }
 
 /* Header & Nav */
-header {
-  position: sticky;
-  top: 0;
-  background: var(--surface);
-  box-shadow: 0 1px 3px var(--shadow-medium);
-  padding: 1rem;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-}
+
 nav {
   display: flex;
-  width: fit-content;            /* make the nav only as wide as its items */
-  margin: 0 auto 0.5rem;         /* center it horizontally, keep that bottom gap */
-  padding: 0.25rem 1rem;         /* give it a little breathing room */
-  gap: 2rem;                     /* space between links */
-  background: var(--surface);    /* match your card background */
+  width: fit-content;
+  margin: 2rem auto 0.5rem auto;
+  padding: 0.25rem 1rem;
+  gap: 2rem;
+  background: var(--surface);
   border-radius: 8px;
   box-shadow: 0 2px 6px var(--shadow-light);
+  position: sticky;
+  top: 32px; /* Adjust this value to match the top padding of your header */
+  z-index: 1100;
 }
 
 nav a {
@@ -614,7 +617,8 @@ nav {
 
   
 .quote-container {
-  display: flex;
+    display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   background-color: #fff;
@@ -645,4 +649,85 @@ button {
 
 button:hover {
   background-color: rgba(0, 122, 255, 0.1);
+}
+
+.quote-howmade-card {
+  margin: 0.3rem auto 0 auto;
+  padding: 0.2rem 0.7rem;
+  background: #eaf4ff;
+  color: #174ea6;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  width: fit-content;
+  box-shadow: 0 1px 4px rgba(10,132,255,0.07);
+  text-align: center;
+}
+
+.quote-howmade-card a {
+  color: #174ea6;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.quote-howmade-card a:hover {
+  color: #0A84FF;
+}
+
+.quote-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  justify-content: center;
+}
+
+form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.main-subheader {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+
+.resume-download-card {
+  margin: 0rem auto 1.5rem auto;
+  padding: 0.2rem 0.9rem;
+  background: #eaf4ff;
+  color: #174ea6;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  width: fit-content;
+  box-shadow: 0 1px 4px rgba(10,132,255,0.07);
+  text-align: center;
+}
+
+.resume-download-card a {
+  color: #174ea6;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.resume-download-card a:hover {
+  color: #0A84FF;
 }

@@ -1,33 +1,81 @@
-function getQuote() {
-  const apiUrl = "https://api.quotable.io/quotes/random?maxLength=50";
-  const quoteElem = document.getElementById("quote");
+const maxElements = 5;
+let quoteArray = [];
 
-  fetch(apiUrl)
+class quoteClass {
+  constructor(quote, author){
+    this.quote = quote;
+    this.author = author;
+  }
+}
+
+
+function getQuote(index) {
+  
+  const apiUrl = "https://api.quotable.io/quotes/random?maxLength=50";
+  
+
+  return fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
       const quote = data[0].content;
       const author = data[0].author;
-      quoteElem.innerHTML = quote + " - " +  author;
+      
+      const newQuote = new quoteClass(quote, author);
+      return newQuote;
     })
     .catch(error => {
+
+        const quoteElem = document.getElementById("quote");
       quoteElem.innerHTML = "Could not load quote. Please try again later." + error;
       console.error("Quote fetch error:", error);
     });
 }
 
-/* Update the quote every 5 minutes */
-getQuote(); // Initial call to fetch a quote
-setInterval(() => {
-  getQuote();
-  console.log("Quote updated");
-}, 5 * 60 * 1000); // every 5 minutes
+function populateQuoteArray(newQuote){
+  quoteArray.push(newQuote);
+  if (quoteArray.length > maxElements){
+    quoteArray.shift();
+  }
+}
+
+function UpdateHTMLQuote(index){
+  const quoteElem = document.getElementById("quote");
+  quoteElem.innerHTML = quoteArray[index].quote + " - " +  quoteArray[index].author;
+}
+
+
+let index = 0;
+getQuote().then(newQuote => 
+{
+  populateQuoteArray(newQuote);
+  UpdateHTMLQuote(index);
+}
+);
 
 
 
 function onLeftClick() {
-  getQuote();
+    if (index != 0){
+        index--;
+    }
+
+    UpdateHTMLQuote(index);
 }
 
 function onRightClick() {
-  getQuote();
+    index++;
+    if (index >= quoteArray.length){
+        getQuote().then(newQuote => 
+{
+  populateQuoteArray(newQuote);
+  index = quoteArray.length - 1;
+  UpdateHTMLQuote(index);
+}
+);
+
+    }
+    else{
+      UpdateHTMLQuote(index);
+    }
+
 }
