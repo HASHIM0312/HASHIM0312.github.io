@@ -8,6 +8,7 @@ class quoteClass {
   }
 }
 
+//TO DO: Error 404, cannot fetch the quote
 
 function getQuote(index) {
   
